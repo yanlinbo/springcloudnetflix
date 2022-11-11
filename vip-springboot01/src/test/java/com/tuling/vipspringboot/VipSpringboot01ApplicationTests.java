@@ -1,4 +1,4 @@
-package com.tuling.vipspringboot01;
+package com.tuling.vipspringboot;
 
 
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package com.tuling.vipspringboot01.config;
+package com.tuling.vipspringboot.config;
 
 public class Girlfriend {
 
