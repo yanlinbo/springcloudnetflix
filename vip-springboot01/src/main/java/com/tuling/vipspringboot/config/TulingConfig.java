@@ -1,5 +1,7 @@
 package com.tuling.vipspringboot.config;
 
+import com.tuling.vipspringboot.component.TulingImportBeanDefinitionRegistrar;
+import com.tuling.vipspringboot.component.TulingImportSelector;
 import com.tuling.vipspringboot.filter.TulingFilter;
 import com.tuling.vipspringboot.interceptor.TulingInterceptor;
 import com.tuling.vipspringboot.servlet.TulingServlet;
@@ -8,10 +10,12 @@ import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 @Configuration
+@Import(value = {TulingImportSelector.class, TulingImportBeanDefinitionRegistrar.class})
 public class TulingConfig extends WebMvcConfigurerAdapter {
 
     @Autowired
